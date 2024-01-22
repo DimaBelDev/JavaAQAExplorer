@@ -1,4 +1,4 @@
-package ru.dima.study;
+package ru.dima.study.lesson_3;
 
 import java.util.Collections;
 

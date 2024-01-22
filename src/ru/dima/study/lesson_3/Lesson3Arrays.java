@@ -1,4 +1,4 @@
-package ru.dima.study;
+package ru.dima.study.lesson_3;
 
 import java.util.Arrays;
 
@@ -24,8 +24,8 @@ public class Lesson3Arrays {
     }
 
     static int[] fillArrayWithConsecutiveNumbers(int [] array) {
-        for(int i = 0, j = 1; i < array.length; i++, j++)
-            array[i] = j;
+        for(int i = 0; i < array.length;)
+            array[i] = ++i;
         return array;
     }
 
