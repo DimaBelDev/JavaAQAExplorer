@@ -1,6 +1,7 @@
 package ru.dima.study.lesson_6;
 
 import java.io.*;
+import java.util.Arrays;
 
 
 public class AppData {
@@ -45,7 +46,7 @@ public class AppData {
         }
     }
 
-    public void load(String filePath) {
+    public AppData load(String filePath) {
 
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
 
@@ -65,11 +66,10 @@ public class AppData {
             }
 
             System.out.println("Data loaded successfully.");
-
-            showHeaderAndData();
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return new AppData(header, data);
     }
 
     private String escapeSpecialCharacters(String value) {
@@ -80,7 +80,7 @@ public class AppData {
         }
     }
 
-    private void showHeaderAndData() {
+    public void showHeaderAndData() {
         for (String columnHeader : header) {
             System.out.printf("%-15s", columnHeader);
         }

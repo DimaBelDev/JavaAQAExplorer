@@ -17,6 +17,8 @@ public class Main {
         appData.save(csvFilePath);
         appData.load(csvFilePath);
 
+        appData.showHeaderAndData();
+
         }
     }
 
